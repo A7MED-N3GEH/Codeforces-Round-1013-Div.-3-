@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define int long long 
+void solve() {
+    int n;cin>>n;
+    if(n&1) // odd
+    {
+        for(int i = n ; i> 0 ; i--)
+        {
+            cout<<i<<' ';
+        }
+        cout<<'\n';
+        return;
+    }
+    //even
+    cout<<"-1\n";
+}
+signed main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int t;
+    cin >> t;
+    while (t--) {
+        solve();
+    }
+
+    return 0;
+}
