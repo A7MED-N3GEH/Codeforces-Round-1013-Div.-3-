@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define int long long 
+void solve() {
+    int n,x;cin>>n>>x;
+    vector<int>arr(n);
+    for(auto &i:arr)cin>>i;
+    int ans  = 0 ,cnt = 0;
+    sort(arr.rbegin(),arr.rend());
+    for(auto i : arr)
+    {
+        cnt++;
+        if(i*cnt >= x)
+        {
+            ans++;
+            cnt = 0;
+        }
+
+    }
+    cout<<ans<<'\n';
+}
+
+signed main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int t;
+    cin >> t;
+    while (t--) {
+        solve();
+    }
+
+    return 0;
+}
